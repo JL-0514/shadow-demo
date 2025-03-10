@@ -21,8 +21,8 @@ class Animator {
         let frame = this.currentFrame();
         if (this.reverse) frame = this.frameCount - frame - 1;
 
-        // if (shadow) this.drawEllipseShadow(ctx, shadow);
-        if (shadow) this.drawImageShadow(frame, ctx, scale, shadow);
+        if (shadow) this.drawEllipseShadow(ctx, shadow);
+        // if (shadow) this.drawImageShadow(frame, ctx, scale, shadow);
        
         ctx.drawImage(this.spritesheet,
             this.xStart + frame * (this.width + this.framePadding), this.yStart, //source from sheet

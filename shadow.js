@@ -46,10 +46,6 @@ class Shadow {
                     else if (b.points[0].y === b.points[1].y && this.owner.y <= b.points[0].y)
                         this.lowerBound = b.points[0].y;
                 }
-                let bottom = this.owner.y + this.owner.height;
-                if (b.points[0].y === b.points[1].y && bottom >= b.points[0].y 
-                    && bottom <= b.points[0].y + 2 * PARAMS.BLOCK_SIZE)
-                    this.lowerBound = b.points[0].y;
             });
             // Wall to cast
             light.cast.forEach(c => {
